@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pembayaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .kontainer {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .form-group select {
+            height: 38px; /* adjust as needed */
+        }
+        .form-group .payment-method {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .form-group .payment-method label {
+            font-weight: normal;
+        }
+        .form-group .payment-method input[type="radio"] {
+            margin-right: 5px;
+        }
+        .form-group .submit-btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="kontainer">
+        <h2>Formulir Pembayaran</h2>
+        <form action="index.html" method="post">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <input type="text" id="alamat" name="alamat" required>
+            </div>
+            <div class="form-group">
+                <label for="nomor_telepon">Nomor Telepon:</label>
+                <input type="text" id="nomor_telepon" name="nomor_telepon" required>
+            </div>
+            <div class="form-group">
+                <label for="nama_pesanan">Nama Pesanan:</label>
+                <input type="text" id="nama_pesanan" name="nama_pesanan" required>
+            </div>
+            <div class="form-group">
+                <label for="jumlah_pesanan">Jumlah Pesanan:</label>
+                <input type="number" id="jumlah_pesanan" name="jumlah_pesanan" min="1" required>
+            </div>
+            <div class="form-group">
+                <label>Metode Pembayaran:</label>
+                <div class="payment-method">
+                    <input type="radio" id="metode_pembayaran_bank" name="metode_pembayaran" value="bank_transfer" required>
+                    <label for="metode_pembayaran_bank">Transfer Bank</label>
+                </div>
+                <div class="payment-method">
+                    <input type="radio" id="metode_pembayaran_cod" name="metode_pembayaran" value="cod">
+                    <label for="metode_pembayaran_cod">Bayar di Tempat (COD)</label>
+                </div>
+            </div>
+            <div class="form-group submit-btn">
+                <button type="submit">Proses Pembayaran</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
