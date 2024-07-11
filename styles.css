@@ -196,6 +196,7 @@ h2 {
 .product-description .text p {
     font-size: 18px;
     line-height: 1.6;
+    text-align: justify;
 }
 
 .add-button {
